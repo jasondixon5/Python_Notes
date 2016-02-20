@@ -5,4 +5,15 @@ Return the sum of the numbers in the array, except ignore sections of numbers st
 * sum67([1, 1, 6, 7, 2]) → 4
 
 ```
+def sum67(nums):
+    add = True
+    sum = 0
+    for x in nums:
+        if x != 6 and add:
+            sum += x
+        if x == 6:
+            add = False
+        if x == 7 and not add:
+            add = True
+    return sum
 ```
