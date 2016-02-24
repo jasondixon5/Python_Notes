@@ -26,7 +26,7 @@ So you can just return False so you're saying, if the exit/True condition wasn't
 
 ##Excel Files
 
-Import module to begin working with Excel files
+Import module to begin working with Excel files  
 Load workbook
 
 ```
@@ -52,4 +52,20 @@ anotherCell.value       #obtains that cell object/variable's value
 <Cell Sheet1.B1>
 >>> activeSheet.cell(row=1, column=2).value
 'Apples'
+
+activeSheet.columns[1] #columns attribute of worksheet object returns cell objects for that column
+#can then iterate over cells in that column, e.g.,:
+for cellObj in activeSheet.columns[1]:
+    print(cellObj.value)
+#******Note about above attribute - unlike using references with cells this uses 0 as 1st column, 1 as 2nd column, etc.
+#This is the case because the attribute returns a tuple of tuples, with each of the inner tuples containing the Cell objects in that column. The same happens for the .rows[n] attribute.
 ```
+Review of steps to access Excel data:  
+1. Import the openpyxl module.  
+2. Call the openpyxl.load_workbook() function.  
+3. Get a Workbook object.  
+4. Call the get_active_sheet() or get_sheet_by_name() workbook method.  
+5. Get a Worksheet object.  
+6. Use indexing or the cell() sheet method with row and column keyword arguments.  
+7. Get a Cell object.  
+8. Read the Cell object's value attribute.  
