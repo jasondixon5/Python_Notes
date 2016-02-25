@@ -72,14 +72,16 @@ Review of steps to access Excel data:
 
 ##CSV Files
 
-Review of steps to read CSV files:
-1. import csv
-2. open file, pass as variable
-3. create reader object with csv.reader (instead of read() or readlines() as you would a File object returned by open())
-4. access values in reader object
-  * can pass values to list via list() method and store result in variable. This will result in a list of lists (a list containing sublist of the contents of each row)
-  * can access list of lists via variable[x][y] where x = row (index position of sublist) and y = col (index position of value in sublist)
-5. take action (iterate, etc.)
+Review of steps to read CSV files:  
+1. import csv  
+2. open file, pass as variable  
+3. create reader object with csv.reader (instead of read() or readlines() as you would a File object returned by open())  
+4. access values in reader object  
+5. take action (iterate, etc.)  
+
+Can pass values to list via list() method and store result in variable. This will result in a list of lists (a list containing sublist of the contents of each row)
+
+Can access list of lists via variable[x][y] where x = row (index position of sublist) and y = col (index position of value in sublist)  
 
 ```
 import csv
