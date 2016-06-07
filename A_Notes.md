@@ -1,10 +1,10 @@
 ## Functions
 
-Arguments
+### Arguments
 
-  -Positional
-  -Keyword
-  -Default
+   - Positional
+   - Keyword
+   - Default
 
 Note: Default argument values are calculated when function is defined, not when it is run. So a list or dictionary does not make a good default argument. Instead, declare the empty list/dictionary within the function definition.
 
@@ -18,8 +18,14 @@ Multiple keyword: gather with **
 
 Calling the tuple parameter args and the dictionary parameter kwargs is a common idiom in Python but is not mandatory.
 
+### Docstrings
+
+To access, call the Python's help() function with the name of the function as the argument.
+Or, to see the raw version, call `print(function.__doc__)`, e.g., `print(echo.__doc__)` if 'echo' were the name of a function.
+
 Source: Introducing Python: Modern Computing in Simple Packages, Bill Lubanovic
 
+### Exiting a Function
 You "return" from a function. Once you return something you exit the function.
 Return is always about returning from the function.
 Return means "I'm done in this function and here's the value I'm giving back."
@@ -46,7 +52,7 @@ The "exit condition" in the first if statement returns True and exits both the l
 At the end, need to return something. If you returned the variable "First2Found" it would return True if 2 were the last value in the series, even if there were no 2's after or before it.
 So you can just return False so you're saying, if the exit/True condition wasn't met then it returns False.
 
-##Referring to Files
+## Referring to Files
 
 Command Repetoire
 ```
@@ -69,7 +75,7 @@ os.chdir('new dir') #new dir as string
 os.path.getsize('path') #returns size in bytes of file in 'path' argument
 os.listdir('path') #like 'ls' but returns a list
 ```
-Filenames
+Files and Filenames
 
 Pass string of individual file and folder names in your path.
 Returns string with file path using correct path separators (\ for Windows, / for OS X and Linus)
@@ -163,10 +169,11 @@ Command-Line Commands
 >>> os.getcwd()
 '/Users/jasondixon/Downloads'
 ```
-##Reading and Writing Files
-1.  Call the open() function to return a File object.
-2.  Call the read() or write() method on the File object.
-3.  Call the close() method on the File object to close the file.
+Reading and Writing Files
+
+1.  Call the `open()` method to return a File object.
+2.  Call the `read()` or `write()` method on the File object.
+3.  Call the `close()` method on the File object to close the file.
 
 Command Repetoire
 ```
@@ -178,7 +185,7 @@ variable.close()
 variable.read()
 variable.readlines()
 ```
-##Use shelve Module to Save Data
+Use shelve Module to Save Data
 ```
 import shelve
 variable = shelve.open('filename')
