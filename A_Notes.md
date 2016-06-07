@@ -52,7 +52,7 @@ The "exit condition" in the first if statement returns True and exits both the l
 At the end, need to return something. If you returned the variable "First2Found" it would return True if 2 were the last value in the series, even if there were no 2's after or before it.
 So you can just return False so you're saying, if the exit/True condition wasn't met then it returns False.
 
-## Referring to Files
+## Working with Files
 
 Command Repetoire
 ```
@@ -75,7 +75,7 @@ os.chdir('new dir') #new dir as string
 os.path.getsize('path') #returns size in bytes of file in 'path' argument
 os.listdir('path') #like 'ls' but returns a list
 ```
-Files and Filenames
+### Files and Filenames
 
 Pass string of individual file and folder names in your path.
 Returns string with file path using correct path separators (\ for Windows, / for OS X and Linus)
@@ -103,7 +103,7 @@ Pass a list of string filenames and the root path and you can create valid full 
 /users/jasondixon/details.csv
 /users/jasondixon/invite.docx
 ```
-Absolute and Relative Paths
+### Absolute and Relative Paths
 ```
 >>> os.getcwd()
 '/Users/jasondixon/Downloads'
@@ -169,7 +169,7 @@ Command-Line Commands
 >>> os.getcwd()
 '/Users/jasondixon/Downloads'
 ```
-Reading and Writing Files
+### Reading and Writing Files
 
 1.  Call the `open()` method to return a File object.
 2.  Call the `read()` or `write()` method on the File object.
@@ -206,7 +206,7 @@ The code run above will cause new files to be created: mydata.db in OSX and myda
 Your programs can use the shelve module to later reopen and retrieve data from these shelf files. Shelf values don't have to be opened in read or write mode--they can do both once opened.
 
 
-##Excel Files
+### Excel Files
 
 Import module to begin working with Excel files  
 Load workbook
@@ -252,7 +252,7 @@ Review of steps to access Excel data:
 7. Get a Cell object.  
 8. Read the Cell object's value attribute.  
 
-##CSV Files
+### CSV Files
 
 Review of steps to read CSV files:  
 1. import csv  
