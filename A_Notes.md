@@ -1,3 +1,25 @@
+## Functions
+
+Arguments
+
+  -Positional
+  -Keyword
+  -Default
+
+Note: Default argument values are calculated when function is defined, not when it is run. So a list or dictionary does not make a good default argument. Instead, declare the empty list/dictionary within the function definition.
+
+Multiple position: gather with *
+>When used inside the function with a parameter, an asterisk groups a variable number of positional arguments into a tuple of parameter values. If your function has required positional arguments as well, *args goes at the end and grabs all the rest.
+
+Multiple keyword: gather with **
+>Use two asterisks to group keyword arguments into a dictionary, where the argument names are the keys and their values are the corresponding values.
+
+>If you mix positional parameters with *args and **kwargs, they need to occur in that order.
+
+Calling the tuple parameter args and the dictionary parameter kwargs is a common idiom in Python but is not mandatory.
+
+Source: Introducing Python: Modern Computing in Simple Packages, Bill Lubanovic
+
 You "return" from a function. Once you return something you exit the function.
 Return is always about returning from the function.
 Return means "I'm done in this function and here's the value I'm giving back."
