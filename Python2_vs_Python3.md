@@ -1,4 +1,4 @@
-## reduce()
+## reduce( )
 Reduce was removed from Python 3 core library.
 It's now in the functools module.
 
