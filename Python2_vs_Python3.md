@@ -1,4 +1,8 @@
-##map( )
+## reduce()
+Reduce was removed from Python 3 core library.
+It's now in the functools module.
+
+## map( )
 
 * In Python 2 map( ) returns a list.
 * In Python 3 map( ) returns an iterator.
@@ -65,7 +69,7 @@ References:
 * http://python3porting.com/differences.html 
 * http://www.python-course.eu/lambda.php
 
-##print( )
+## print( )
 
 * In Python 2 `print variable` prints the variable.
 * In Python 3 the print call requires parentheses: `print(variable)`
